@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2xC-4I-wVT">
+    <device id="retina6_1" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller Landscape-->
+        <scene sceneID="YOu-lh-qED">
+            <objects>
+                <viewController storyboardIdentifier="LoginLandscape" id="2xC-4I-wVT" customClass="LoginViewControllerLandscape" customModule="MyGames" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZvI-7J-b92">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pacoquita" translatesAutoresizingMaskIntoConstraints="NO" id="mMS-zr-qMj">
+                                <rect key="frame" x="249.5" y="113.5" width="166" height="166"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="mMS-zr-qMj" secondAttribute="height" multiplier="1:1" id="ey6-9C-tfG"/>
+                                    <constraint firstAttribute="width" constant="166" id="oVc-7t-3up"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R7m-QF-vAi" userLabel="Separator">
+                                <rect key="frame" x="447.5" y="78.5" width="1" height="236"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="1" id="YSM-9c-jIn"/>
+                                </constraints>
+                            </view>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="07a-ML-BOV" userLabel="FirstTextField">
+                                <rect key="frame" x="469.5" y="179.5" width="323" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jrw-aQ-Pkz" userLabel="SecondTextField">
+                                <rect key="frame" x="469.5" y="229.5" width="323" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="81T-2o-Ig9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JLk-Lp-4pn" userLabel="ButtonLogin">
+                                <rect key="frame" x="469.5" y="295.5" width="323" height="40"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Pou-dg-Sn9"/>
+                                </constraints>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="07a-ML-BOV" firstAttribute="width" secondItem="Ud2-ev-AIO" secondAttribute="width" multiplier="0.4" id="0mI-EP-GFQ"/>
+                            <constraint firstItem="jrw-aQ-Pkz" firstAttribute="top" secondItem="07a-ML-BOV" secondAttribute="bottom" constant="16" id="2Ce-cB-XkO"/>
+                            <constraint firstItem="R7m-QF-vAi" firstAttribute="centerX" secondItem="Ud2-ev-AIO" secondAttribute="centerX" id="4wg-qA-Lso"/>
+                            <constraint firstItem="JLk-Lp-4pn" firstAttribute="width" secondItem="jrw-aQ-Pkz" secondAttribute="width" id="62P-kt-XrE"/>
+                            <constraint firstItem="JLk-Lp-4pn" firstAttribute="centerX" secondItem="jrw-aQ-Pkz" secondAttribute="centerX" id="8de-qn-rz3"/>
+                            <constraint firstItem="R7m-QF-vAi" firstAttribute="height" secondItem="Ud2-ev-AIO" secondAttribute="height" multiplier="0.6" id="D3e-Bp-hIx"/>
+                            <constraint firstItem="jrw-aQ-Pkz" firstAttribute="width" secondItem="07a-ML-BOV" secondAttribute="width" id="OUi-1h-euY"/>
+                            <constraint firstItem="07a-ML-BOV" firstAttribute="leading" secondItem="R7m-QF-vAi" secondAttribute="trailing" constant="21" id="PXW-S6-HJx"/>
+                            <constraint firstItem="mMS-zr-qMj" firstAttribute="centerY" secondItem="Ud2-ev-AIO" secondAttribute="centerY" id="SFb-Bb-iM9"/>
+                            <constraint firstItem="jrw-aQ-Pkz" firstAttribute="centerX" secondItem="07a-ML-BOV" secondAttribute="centerX" id="awY-lR-j6b"/>
+                            <constraint firstItem="JLk-Lp-4pn" firstAttribute="top" secondItem="jrw-aQ-Pkz" secondAttribute="bottom" constant="32" id="bNy-zG-p6A"/>
+                            <constraint firstItem="R7m-QF-vAi" firstAttribute="centerY" secondItem="Ud2-ev-AIO" secondAttribute="centerY" id="bTD-sn-Sr5"/>
+                            <constraint firstItem="07a-ML-BOV" firstAttribute="centerY" secondItem="Ud2-ev-AIO" secondAttribute="centerY" id="cEh-S8-bYO"/>
+                            <constraint firstItem="R7m-QF-vAi" firstAttribute="leading" secondItem="mMS-zr-qMj" secondAttribute="trailing" constant="32" id="xh5-VN-m6S"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ud2-ev-AIO"/>
+                    </view>
+                    <connections>
+                        <outlet property="LoginButton" destination="JLk-Lp-4pn" id="SZ7-lw-f7k"/>
+                        <outlet property="loginImageView" destination="mMS-zr-qMj" id="TfQ-OX-zMl"/>
+                        <outlet property="logoImageView" destination="mMS-zr-qMj" id="uek-B8-CzO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gwy-GW-jby" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-456.02678571428567" y="-188.40579710144928"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pacoquita" width="600" height="600"/>
+    </resources>
+</document>
