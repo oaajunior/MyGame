@@ -2,6 +2,29 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:MyGames.xcodeproj">
+      location = "group:/Users/aluno/Desktop/dev2018_02/MyGames_novo/MyGames/Views/Onboarding.storyboard">
+   </FileRef>
+   <Group
+      location = "group:../MyGames/Views"
+      name = "Views">
+      <Group
+         location = "group:Base.lproj"
+         name = "Base.lproj">
+         <FileRef
+            location = "group:LaunchScreen.storyboard">
+         </FileRef>
+         <FileRef
+            location = "group:Main.storyboard">
+         </FileRef>
+      </Group>
+      <FileRef
+         location = "group:Main.storyboard">
+      </FileRef>
+      <FileRef
+         location = "group:Login.storyboard">
+      </FileRef>
+   </Group>
+   <FileRef
+      location = "self:">
    </FileRef>
 </Workspace>

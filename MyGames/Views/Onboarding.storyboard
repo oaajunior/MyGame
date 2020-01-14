@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mS0-5E-r73">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UIT-nc-CxF">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
@@ -7,18 +7,18 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Onboarding View Controller-->
-        <scene sceneID="798-Ez-zGe">
+        <!--View Controller-->
+        <scene sceneID="fiS-fP-rXh">
             <objects>
-                <viewController id="mS0-5E-r73" customClass="OnboardingViewController" customModule="MyGames" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="YTj-Qt-e7O">
+                <viewController id="UIT-nc-CxF" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yoF-M0-2pt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="edZ-Bi-eui">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dXE-gS-LZF">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="GpL-OJ-5cR">
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4Md-YM-VxI">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -29,20 +29,17 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="edZ-Bi-eui" secondAttribute="bottom" id="DWi-yQ-0cF"/>
-                            <constraint firstItem="edZ-Bi-eui" firstAttribute="leading" secondItem="oiX-rp-HQW" secondAttribute="leading" id="Dag-tA-0g6"/>
-                            <constraint firstItem="edZ-Bi-eui" firstAttribute="trailing" secondItem="oiX-rp-HQW" secondAttribute="trailing" id="fbi-Hk-HNv"/>
-                            <constraint firstItem="edZ-Bi-eui" firstAttribute="top" secondItem="YTj-Qt-e7O" secondAttribute="top" id="lGt-XI-8lh"/>
+                            <constraint firstItem="dXE-gS-LZF" firstAttribute="trailing" secondItem="YZH-Ar-K19" secondAttribute="trailing" id="EOG-zw-Hvz"/>
+                            <constraint firstAttribute="bottom" secondItem="dXE-gS-LZF" secondAttribute="bottom" id="XVy-5j-oD6"/>
+                            <constraint firstItem="dXE-gS-LZF" firstAttribute="leading" secondItem="YZH-Ar-K19" secondAttribute="leading" id="nXf-ay-khC"/>
+                            <constraint firstItem="dXE-gS-LZF" firstAttribute="top" secondItem="YZH-Ar-K19" secondAttribute="top" id="xSW-cc-1FN"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="oiX-rp-HQW"/>
+                        <viewLayoutGuide key="safeArea" id="YZH-Ar-K19"/>
                     </view>
-                    <connections>
-                        <outlet property="collectionView" destination="edZ-Bi-eui" id="DKv-Hc-His"/>
-                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xJe-7D-z0x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zai-CN-ckc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8.6956521739130448" y="170.75892857142856"/>
+            <point key="canvasLocation" x="-255.07246376811597" y="-1314.5089285714284"/>
         </scene>
     </scenes>
 </document>

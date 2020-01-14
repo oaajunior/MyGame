@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewControllerLandscape: UIViewController {
+class LoginViewController: UIViewController {
 
     @IBOutlet weak var LoginButton: UIButton!
     @IBOutlet weak var loginImageView: UIImageView!
@@ -18,10 +18,12 @@ class LoginViewControllerLandscape: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
        loadOnboarding(withModels: [
             OnboardingCollectionViewCellModel(title: "The best app ever from login", description: "First app with the new guys", imageName: "pacoquita"),
             OnboardingCollectionViewCellModel(title: "The best app ever from login", description: "First app with the new guys", imageName: "pacoquita")
         ])
+ 
 
         //configureButton()
         configureNavigationItem()
@@ -41,17 +43,25 @@ class LoginViewControllerLandscape: UIViewController {
     }
     
     override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
-        super.willTransition(to: newCollection, with: coordinator)
-
-        if newCollection.verticalSizeClass == .regular {
-            dismiss(animated: true, completion: nil)
-
-            let viewController = LoginViewController(nibName: "LoginViewController", bundle: nil)
-            present(viewController, animated: true, completion: nil)
-        }
-    }
-
-
+           super.willTransition(to: newCollection, with: coordinator)
+           
+           if newCollection.verticalSizeClass == .compact{
+               
+               dismiss(animated: true, completion: nil)
+              let storyBoard = UIStoryboard(name: "Login", bundle: nil)
+               let viewController = storyBoard.instantiateViewController(identifier: "LoginLandscape") as! ViewController
+               self.navigationController?.pushViewController(viewController, animated: true)
+           }
+           if newCollection.verticalSizeClass == .regular{
+               
+               dismiss(animated: true, completion: nil)
+               let storyBoard = UIStoryboard(name: "Login", bundle: nil)
+               let viewController = storyBoard.instantiateViewController(identifier: "LoginPortrait") as! ViewController
+                   self.navigationController?.pushViewController(viewController, animated: true)
+           }
+       }
+     
+    
     /*
     // MARK: - Navigation
 
