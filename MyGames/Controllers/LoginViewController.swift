@@ -18,18 +18,22 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+    
+        loadOnboarding(withModels: [
+                   OnboardingCollectionViewCellModel(title: "O melhor App criado ever", description: "Melhor doce, paçoquita", imageName: "pacoquita"),
+                   OnboardingCollectionViewCellModel(title: "O melhor App criado ever", description: "Não adianta, paçoquita é a melhor", imageName: "pacoquita"),
+               ])
         
-       loadOnboarding(withModels: [
-            OnboardingCollectionViewCellModel(title: "The best app ever from login", description: "First app with the new guys", imageName: "pacoquita"),
-            OnboardingCollectionViewCellModel(title: "The best app ever from login", description: "First app with the new guys", imageName: "pacoquita")
-        ])
- 
-
-        //configureButton()
-        configureNavigationItem()
+               //configureButton()
+               configureNavigationItem()
     }
     
     private func loadOnboarding(withModels models: [OnboardingCollectionViewCellModel]) {
+            
         if let viewController = UIStoryboard(name: "Onboarding", bundle: nil).instantiateInitialViewController() as? OnboardingViewController {
             onboardingViewController = viewController
             viewController.datasource = models
@@ -37,26 +41,37 @@ class LoginViewController: UIViewController {
         }
 
     }
+     
+     private func configureLogoImageView(){
+         loginImageView.layer.cornerRadius = loginImageView.frame.size.height / 2
+         loginImageView.layer.masksToBounds = true
+     }
     
     private func configureNavigationItem() {
         navigationItem.title = "Login"
     }
+    
+    
+     override func viewDidLayoutSubviews() {
+          super.viewDidLayoutSubviews()
+          //configureLogoImageView()
+      }
     
     override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
            super.willTransition(to: newCollection, with: coordinator)
            
            if newCollection.verticalSizeClass == .compact{
                
-               dismiss(animated: true, completion: nil)
+              dismiss(animated: true, completion: nil)
               let storyBoard = UIStoryboard(name: "Login", bundle: nil)
-               let viewController = storyBoard.instantiateViewController(identifier: "LoginLandscape") as! ViewController
+               let viewController = storyBoard.instantiateViewController(identifier: "LoginLandscape") as! LoginViewController
                self.navigationController?.pushViewController(viewController, animated: true)
            }
            if newCollection.verticalSizeClass == .regular{
                
                dismiss(animated: true, completion: nil)
                let storyBoard = UIStoryboard(name: "Login", bundle: nil)
-               let viewController = storyBoard.instantiateViewController(identifier: "LoginPortrait") as! ViewController
+               let viewController = storyBoard.instantiateViewController(identifier: "LoginPortrait") as! LoginViewController
                    self.navigationController?.pushViewController(viewController, animated: true)
            }
        }

@@ -7,18 +7,18 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Onboarding View Controller-->
         <scene sceneID="fiS-fP-rXh">
             <objects>
-                <viewController id="UIT-nc-CxF" sceneMemberID="viewController">
+                <viewController id="UIT-nc-CxF" customClass="OnboardingViewController" customModule="MyGames" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yoF-M0-2pt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dXE-gS-LZF">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4Md-YM-VxI">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4Md-YM-VxI">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -29,13 +29,16 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="dXE-gS-LZF" firstAttribute="trailing" secondItem="YZH-Ar-K19" secondAttribute="trailing" id="EOG-zw-Hvz"/>
+                            <constraint firstItem="dXE-gS-LZF" firstAttribute="trailing" secondItem="yoF-M0-2pt" secondAttribute="trailing" id="EOG-zw-Hvz"/>
                             <constraint firstAttribute="bottom" secondItem="dXE-gS-LZF" secondAttribute="bottom" id="XVy-5j-oD6"/>
-                            <constraint firstItem="dXE-gS-LZF" firstAttribute="leading" secondItem="YZH-Ar-K19" secondAttribute="leading" id="nXf-ay-khC"/>
-                            <constraint firstItem="dXE-gS-LZF" firstAttribute="top" secondItem="YZH-Ar-K19" secondAttribute="top" id="xSW-cc-1FN"/>
+                            <constraint firstItem="dXE-gS-LZF" firstAttribute="leading" secondItem="yoF-M0-2pt" secondAttribute="leading" id="nXf-ay-khC"/>
+                            <constraint firstItem="dXE-gS-LZF" firstAttribute="top" secondItem="yoF-M0-2pt" secondAttribute="top" id="xSW-cc-1FN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YZH-Ar-K19"/>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="dXE-gS-LZF" id="xIU-or-43V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zai-CN-ckc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

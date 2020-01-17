@@ -32,6 +32,10 @@ class OnboardingViewController: UIViewController {
     @objc func gestureApplied() {
           dismiss(animated: true, completion: nil)
       }
+    
+    override func viewWillAppear(_ animated: Bool) {
+           super.viewWillAppear(animated)
+       }
 }
 
 extension OnboardingViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {

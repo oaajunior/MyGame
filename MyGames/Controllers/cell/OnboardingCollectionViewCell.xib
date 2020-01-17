@@ -19,13 +19,11 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CdD-no-LTb">
                         <rect key="frame" x="0.0" y="0.0" width="342" height="484"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xay-ns-1J8" userLabel="Background Image">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xay-ns-1J8" userLabel="Background Image">
                                 <rect key="frame" x="0.0" y="0.0" width="342" height="484"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <view alpha="0.55000000000000004" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yb2-gs-mVf" userLabel="view">
+                            <view alpha="0.55000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yb2-gs-mVf" userLabel="view">
                                 <rect key="frame" x="0.0" y="0.0" width="342" height="484"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Effect Phrase" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J0I-Fn-1Pf" userLabel="Title Label">
@@ -50,10 +48,18 @@ asdf</string>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Yb2-gs-mVf" secondAttribute="bottom" id="3hy-vj-aP9"/>
+                            <constraint firstItem="Xay-ns-1J8" firstAttribute="top" secondItem="CdD-no-LTb" secondAttribute="top" id="56G-bX-e85"/>
+                            <constraint firstAttribute="trailing" secondItem="Yb2-gs-mVf" secondAttribute="trailing" id="8NS-6h-777"/>
+                            <constraint firstItem="Yb2-gs-mVf" firstAttribute="top" secondItem="CdD-no-LTb" secondAttribute="top" id="BVt-6X-hAr"/>
+                            <constraint firstItem="Yb2-gs-mVf" firstAttribute="leading" secondItem="CdD-no-LTb" secondAttribute="leading" id="CXZ-az-7Bf"/>
                             <constraint firstItem="W5T-p5-ONW" firstAttribute="centerX" secondItem="CdD-no-LTb" secondAttribute="centerX" id="Ffr-h4-dSm"/>
+                            <constraint firstAttribute="trailing" secondItem="Xay-ns-1J8" secondAttribute="trailing" id="IvI-SR-3DA"/>
+                            <constraint firstAttribute="bottom" secondItem="Xay-ns-1J8" secondAttribute="bottom" id="RT9-3T-9eu"/>
                             <constraint firstItem="J0I-Fn-1Pf" firstAttribute="centerY" secondItem="CdD-no-LTb" secondAttribute="centerY" id="WuH-Zt-9MM"/>
                             <constraint firstItem="J0I-Fn-1Pf" firstAttribute="centerX" secondItem="CdD-no-LTb" secondAttribute="centerX" id="fcw-1l-EFI"/>
                             <constraint firstItem="W5T-p5-ONW" firstAttribute="top" secondItem="J0I-Fn-1Pf" secondAttribute="bottom" constant="26" id="wE2-Cv-Alg"/>
+                            <constraint firstItem="Xay-ns-1J8" firstAttribute="leading" secondItem="CdD-no-LTb" secondAttribute="leading" id="zWs-nu-NLo"/>
                         </constraints>
                     </view>
                 </subviews>

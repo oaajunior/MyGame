@@ -22,7 +22,6 @@
 		579DBC142392E0B60088B0BF /* EditConsoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579DBC132392E0B60088B0BF /* EditConsoleViewController.swift */; };
 		57F2E9A12391D23000152985 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F2E9A02391D23000152985 /* AppDelegate.swift */; };
 		57F2E9A32391D23000152985 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F2E9A22391D23000152985 /* SceneDelegate.swift */; };
-		57F2E9A52391D23000152985 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F2E9A42391D23000152985 /* ViewController.swift */; };
 		57F2E9A82391D23000152985 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57F2E9A62391D23000152985 /* Main.storyboard */; };
 		57F2E9AB2391D23000152985 /* MyGames.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 57F2E9A92391D23000152985 /* MyGames.xcdatamodeld */; };
 		57F2E9AD2391D23100152985 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57F2E9AC2391D23100152985 /* Assets.xcassets */; };
@@ -46,7 +45,6 @@
 		57F2E99D2391D23000152985 /* MyGames.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyGames.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57F2E9A02391D23000152985 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57F2E9A22391D23000152985 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		57F2E9A42391D23000152985 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		57F2E9A72391D23000152985 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		57F2E9AA2391D23000152985 /* MyGames.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyGames.xcdatamodel; sourceTree = "<group>"; };
 		57F2E9AC2391D23100152985 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -119,7 +117,6 @@
 				57F2E9A22391D23000152985 /* SceneDelegate.swift */,
 				57F2E9A02391D23000152985 /* AppDelegate.swift */,
 				577A3D9F23CA5496008D5A02 /* OnboardingViewController.swift */,
-				57F2E9A42391D23000152985 /* ViewController.swift */,
 				577A3DA223CA5671008D5A02 /* OnboardingCollectionViewCell.swift */,
 				579DBC04239291130088B0BF /* cell */,
 				579DBC052392930B0088B0BF /* GamesTableViewController.swift */,
@@ -210,7 +207,6 @@
 				579DBC03239290EB0088B0BF /* GameTableViewCell.swift in Sources */,
 				579DBC0C239293850088B0BF /* AddEditViewController.swift in Sources */,
 				579DBC062392930B0088B0BF /* GamesTableViewController.swift in Sources */,
-				57F2E9A52391D23000152985 /* ViewController.swift in Sources */,
 				57FA5EB023CD13D900A6027B /* LoginViewController.swift in Sources */,
 				577A3DA423CA5671008D5A02 /* OnboardingCollectionViewCell.swift in Sources */,
 				579DBC0A239293700088B0BF /* GameViewController.swift in Sources */,
