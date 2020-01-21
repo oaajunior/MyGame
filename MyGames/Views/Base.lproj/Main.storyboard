@@ -423,7 +423,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="fX0-Hj-mUU">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="fX2-Id-U7l" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fX2-Id-U7l" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xql-PG-ra7">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
