@@ -26,7 +26,8 @@ class ConsolesTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
          // se ocorrer mudancas na entidade Console, a atualização automatica não irá ocorrer porque nosso NSFetchResultsController esta monitorando a entidade Game. Caso tiver mudanças na entidade Console precisamos atualizar a tela com a tabela de alguma forma: reloadData :)
-         loadConsoles()
+        AppUtility.lockOrientation(.portrait)
+        loadConsoles()
          //tableView.reloadData()
     }
 
@@ -99,6 +100,13 @@ class ConsolesTableViewController: UITableViewController {
              tableView.deleteRows(at: [indexPath], with: .fade)
          }
      }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        // Don't forget to reset when view is being removed
+        AppUtility.lockOrientation(.all)
+    }
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)

@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-private let reuseIdentifier = "Cell"
+private let reuseIdentifier = "GameCollectionViewCell"
 
 class GameCollectionViewController: UICollectionViewController {
 
@@ -17,7 +17,7 @@ class GameCollectionViewController: UICollectionViewController {
     
     var datasource: [GameCollectionViewCellModel] = []
     
-    var gameObject: GameCollectionViewCellModel?
+    //var gamesModelObject: GameCollectionViewCellModel?
     
     var fetchedResultController:NSFetchedResultsController<Game>!
     var label = UILabel()
@@ -39,7 +39,7 @@ class GameCollectionViewController: UICollectionViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-        self.gameCollectionVC!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        //self.gameCollectionVC!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         // Do any additional setup after loading the view.
         // mensagem default
@@ -47,7 +47,7 @@ class GameCollectionViewController: UICollectionViewController {
         label.textAlignment = .center
         
         self.definesPresentationContext = true
-        
+        loadGames()
     }
     
     @objc func gestureApplied() {
@@ -80,9 +80,16 @@ class GameCollectionViewController: UICollectionViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
          // se ocorrer mudancas na entidade Console, a atualização automatica não irá ocorrer porque nosso NSFetchResultsController esta monitorando a entidade Game. Caso tiver mudanças na entidade Console precisamos atualizar a tela com a tabela de alguma forma: reloadData :)
-         collectionView.reloadData()
+        AppUtility.lockOrientation(.portrait)
+        collectionView.reloadData()
     }
 
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        // Don't forget to reset when view is being removed
+        AppUtility.lockOrientation(.all)
+    }
     /*
     // MARK: - Navigation
 
@@ -94,7 +101,7 @@ class GameCollectionViewController: UICollectionViewController {
     */
 }
 
-extension GameCollectionViewController :  UICollectionViewDelegateFlowLayout {
+extension GameCollectionViewController : UICollectionViewDelegateFlowLayout  {
     
 // MARK: UICollectionViewDataSource
 
@@ -106,25 +113,53 @@ extension GameCollectionViewController :  UICollectionViewDelegateFlowLayout {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return datasource.count
+         let count = fetchedResultController?.fetchedObjects?.count ?? 0
+               collectionView.backgroundView = count == 0 ? label : nil
+               return count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! GameCollectionViewCell
-    
-        // Configure the cell
         
-        let row = indexPath.row
-        cell.populate(model: datasource[row])
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! GameCollectionViewCell
+        
+        let game = fetchedResultController.fetchedObjects?[indexPath.row]
+     
+     //gamesModelObject?.title = game?.title
+        var text = ""
+        
+     if let releaseDate = game?.releaseDate {
+               let formatter = DateFormatter()
+               formatter.dateStyle = .long
+               formatter.locale = Locale(identifier: "pt-BR")
+         text = "Lançamento: " + formatter.string(from: releaseDate)
+         //gamesModelObject?.description = text
+     }
+     var ivCover: UIImage
+     if let image = game?.cover as? UIImage {
+                 ivCover = image
+            } else {
+         ivCover = UIImage(named: "noCoverFull")!
+         
+            }
+         //gamesModelObject?.imageName = ivCover
     
-        return cell
+     
+     //else {return cell}
+     //let row = indexPath.row
+      
+        let gamesModelObject = GameCollectionViewCellModel(title: game!.title!, description: text, imageName: ivCover)
+        
+     cell.populate(model: gamesModelObject)
+     return cell
     }
     
+    /*
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
     }
+ */
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0

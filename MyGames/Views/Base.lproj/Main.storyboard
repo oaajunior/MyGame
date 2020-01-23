@@ -480,16 +480,22 @@
             </objects>
             <point key="canvasLocation" x="-252" y="-492"/>
         </scene>
-        <!--Item-->
+        <!--Jogos-->
         <scene sceneID="yYK-nu-Q4F">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7PT-e4-Hsp" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="game" id="vJF-9o-QfI"/>
+                    <tabBarItem key="tabBarItem" title="Jogos" image="game" id="vJF-9o-QfI"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="tLH-WG-kCR">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -512,6 +518,6 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="cEk-yS-9iE"/>
+        <segue reference="udp-uY-mw9"/>
     </inferredMetricsTieBreakers>
 </document>

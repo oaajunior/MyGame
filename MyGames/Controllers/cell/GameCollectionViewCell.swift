@@ -11,9 +11,9 @@ import UIKit
 struct GameCollectionViewCellModel {
     var title: String?
     var description: String?
-    var imageName: String?
+    var imageName: UIImage?
     
-    init(title: String, description: String, imageName: String) {
+    init(title: String, description: String, imageName: UIImage) {
         self.title = title
         self.description = description
         self.imageName = imageName
@@ -40,9 +40,7 @@ class GameCollectionViewCell: UICollectionViewCell {
         titleGameText.text = model.title
         descriptionGameText.text = model.description
         
-        if let imageName = model.imageName {
-            gameImageView.image = UIImage(named: imageName)
-        }
+        gameImageView.image = model.imageName
     }
 
 }

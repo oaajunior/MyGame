@@ -79,6 +79,7 @@ class AddEditViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         prepareDataLayout()
+         AppUtility.lockOrientation(.portrait)
     }
     
 
@@ -173,6 +174,13 @@ class AddEditViewController: UIViewController {
                self.chooseImageFromLibrary(sourceType: sourceType)
            }
        }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        // Don't forget to reset when view is being removed
+        AppUtility.lockOrientation(.all)
+    }
 }
 
 extension AddEditViewController: UIPickerViewDelegate, UIPickerViewDataSource {
