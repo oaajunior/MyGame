@@ -11,7 +11,7 @@
         <!--Lista de Jogos-->
         <scene sceneID="hgY-tk-OJa">
             <objects>
-                <tableViewController id="6rc-eA-ZNC" customClass="GamesTableViewController" customModule="MyGames" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController wantsFullScreenLayout="YES" id="6rc-eA-ZNC" customClass="GamesTableViewController" customModule="MyGames" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="uhr-oo-tp3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -211,8 +211,8 @@
                                     <action selector="addEditGame:" destination="1xf-og-x0U" eventType="touchUpInside" id="QCh-5b-8d2"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t2w-Bb-UHY">
-                                <rect key="frame" x="16" y="432" width="382" height="295"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t2w-Bb-UHY">
+                                <rect key="frame" x="75" y="564.5" width="264" height="30"/>
                                 <state key="normal" title="Toque para adicinar a imagem de capa"/>
                                 <connections>
                                     <action selector="AddEditCover:" destination="1xf-og-x0U" eventType="touchUpInside" id="0fJ-6q-6PW"/>
@@ -233,6 +233,7 @@
                             <constraint firstItem="t2w-Bb-UHY" firstAttribute="centerX" secondItem="epF-tX-HdO" secondAttribute="centerX" id="PHx-bH-slT"/>
                             <constraint firstItem="epF-tX-HdO" firstAttribute="top" secondItem="ulU-Fy-Doe" secondAttribute="bottom" constant="8" id="S5q-jV-Cz3"/>
                             <constraint firstItem="OHW-pf-HBI" firstAttribute="leading" secondItem="I3K-1G-Ssi" secondAttribute="leading" constant="16" id="SSt-pZ-oCe"/>
+                            <constraint firstItem="I3K-1G-Ssi" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ulU-Fy-Doe" secondAttribute="trailing" symbolic="YES" id="apx-N1-qAw"/>
                             <constraint firstItem="bkP-Qx-qSZ" firstAttribute="top" secondItem="pXY-iQ-y3T" secondAttribute="bottom" constant="14" id="cn3-pu-y3a"/>
                             <constraint firstItem="I3K-1G-Ssi" firstAttribute="trailing" secondItem="bkP-Qx-qSZ" secondAttribute="trailing" constant="16" id="cxz-YQ-N7W"/>
                             <constraint firstItem="I3K-1G-Ssi" firstAttribute="trailing" secondItem="OHW-pf-HBI" secondAttribute="trailing" constant="16" id="ewm-MB-ln5"/>
@@ -273,18 +274,19 @@
                                 <rect key="frame" x="12" y="281" width="382" height="301"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wiE-KT-l4O">
-                                <rect key="frame" x="12" y="287" width="382" height="295"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wiE-KT-l4O">
+                                <rect key="frame" x="16" y="303" width="382" height="295"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="295" id="vU0-7g-dJ8"/>
+                                </constraints>
                                 <state key="normal" title="Toque para adicionar a imagem de capa"/>
                                 <connections>
                                     <action selector="AddEditCover:" destination="1xf-og-x0U" eventType="touchUpInside" id="58t-zP-vje"/>
                                     <action selector="loadFotos:" destination="Gmx-cI-WpA" eventType="touchUpInside" id="CxJ-Ag-dai"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zR0-mg-T45">
-                                <rect key="frame" x="12" y="715" width="382" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zR0-mg-T45">
+                                <rect key="frame" x="16" y="715" width="382" height="30"/>
                                 <color key="backgroundColor" name="main"/>
                                 <state key="normal" title="Salvar">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -304,7 +306,13 @@
                         <constraints>
                             <constraint firstItem="780-nP-DsE" firstAttribute="trailing" secondItem="bWm-1J-nBy" secondAttribute="trailing" constant="16" id="5AZ-tS-AdX"/>
                             <constraint firstItem="bWm-1J-nBy" firstAttribute="top" secondItem="780-nP-DsE" secondAttribute="top" constant="48" id="IN1-0u-aGA"/>
+                            <constraint firstItem="zR0-mg-T45" firstAttribute="leading" secondItem="780-nP-DsE" secondAttribute="leading" constant="16" id="UDD-xK-Anw"/>
+                            <constraint firstItem="wiE-KT-l4O" firstAttribute="leading" secondItem="780-nP-DsE" secondAttribute="leading" constant="16" id="g3c-ul-tHm"/>
+                            <constraint firstItem="wiE-KT-l4O" firstAttribute="centerY" secondItem="780-nP-DsE" secondAttribute="centerY" id="gnd-4O-dw3"/>
+                            <constraint firstItem="780-nP-DsE" firstAttribute="trailing" secondItem="wiE-KT-l4O" secondAttribute="trailing" constant="16" id="hgS-pf-JGB"/>
+                            <constraint firstItem="780-nP-DsE" firstAttribute="trailing" secondItem="zR0-mg-T45" secondAttribute="trailing" constant="16" id="hzg-Wg-MBE"/>
                             <constraint firstItem="bWm-1J-nBy" firstAttribute="leading" secondItem="780-nP-DsE" secondAttribute="leading" constant="16" id="uy7-Ao-up4"/>
+                            <constraint firstItem="zR0-mg-T45" firstAttribute="top" secondItem="wiE-KT-l4O" secondAttribute="bottom" constant="117" id="yBX-1o-sdO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="780-nP-DsE"/>
                     </view>
@@ -364,8 +372,10 @@
                             <constraint firstItem="7Ev-F1-CjO" firstAttribute="bottom" secondItem="qjv-Vm-Cwn" secondAttribute="bottom" constant="24" id="L16-pP-4c5"/>
                             <constraint firstItem="jcB-Fj-HaJ" firstAttribute="leading" secondItem="7Ev-F1-CjO" secondAttribute="leading" constant="16" id="LpZ-Gz-p1Z"/>
                             <constraint firstItem="HkL-TK-HzH" firstAttribute="top" secondItem="Fss-XT-LE7" secondAttribute="bottom" constant="7.5" id="P1n-kj-QoG"/>
+                            <constraint firstItem="HkL-TK-HzH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="jcB-Fj-HaJ" secondAttribute="trailing" constant="8" symbolic="YES" id="SVK-Vq-L9d"/>
                             <constraint firstItem="Fss-XT-LE7" firstAttribute="leading" secondItem="7Ev-F1-CjO" secondAttribute="leading" constant="16" id="WMM-zc-Xxv"/>
                             <constraint firstItem="7Ev-F1-CjO" firstAttribute="trailing" secondItem="HkL-TK-HzH" secondAttribute="trailing" constant="16" id="YfN-Hi-fgc"/>
+                            <constraint firstItem="HkL-TK-HzH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="rbU-iP-kzX" secondAttribute="trailing" constant="8" symbolic="YES" id="amd-rk-5me"/>
                             <constraint firstItem="qjv-Vm-Cwn" firstAttribute="top" secondItem="rbU-iP-kzX" secondAttribute="bottom" constant="10" id="ehe-28-jQJ"/>
                             <constraint firstItem="rbU-iP-kzX" firstAttribute="leading" secondItem="7Ev-F1-CjO" secondAttribute="leading" constant="16" id="n8D-M0-JnB"/>
                             <constraint firstItem="rbU-iP-kzX" firstAttribute="top" secondItem="jcB-Fj-HaJ" secondAttribute="bottom" constant="8" id="nyE-dG-ZNH"/>
@@ -420,6 +430,35 @@
             </objects>
             <point key="canvasLocation" x="729" y="238"/>
         </scene>
+        <!--Lista de Jogos-->
+        <scene sceneID="Xre-hg-yas">
+            <objects>
+                <collectionViewController id="9JO-cU-NZv" customClass="GameCollectionViewController" customModule="MyGames" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="dLA-kc-Zru">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="J8G-0p-Xay">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells/>
+                        <connections>
+                            <outlet property="dataSource" destination="9JO-cU-NZv" id="YDU-Ie-Lhq"/>
+                            <outlet property="delegate" destination="9JO-cU-NZv" id="M3K-ur-NpP"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Lista de Jogos" leftItemsSupplementBackButton="YES" id="gfJ-Oc-ABp"/>
+                    <connections>
+                        <outlet property="gameCollectionVC" destination="dLA-kc-Zru" id="zLc-1R-iFy"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pVA-Gg-uIq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3460.8695652173915" y="237.72321428571428"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="fX0-Hj-mUU">
             <objects>
@@ -434,11 +473,32 @@
                     <connections>
                         <segue destination="n0G-OX-0zB" kind="relationship" relationship="viewControllers" id="GTh-P2-49t"/>
                         <segue destination="eTh-dK-6yX" kind="relationship" relationship="viewControllers" id="Grw-Zn-8n4"/>
+                        <segue destination="7PT-e4-Hsp" kind="relationship" relationship="viewControllers" id="F3c-qb-bOa"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5zP-HB-tu6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-252" y="-492"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="yYK-nu-Q4F">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7PT-e4-Hsp" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" image="game" id="vJF-9o-QfI"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="tLH-WG-kCR">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9JO-cU-NZv" kind="relationship" relationship="rootViewController" id="C9a-EG-PE4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oZ2-AM-Hwl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2550.7246376811595" y="237.72321428571428"/>
         </scene>
     </scenes>
     <resources>
@@ -452,6 +512,6 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="udp-uY-mw9"/>
+        <segue reference="cEk-yS-9iE"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="GameCollectionViewCell" customModule="MyGames" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="132"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="200" height="132"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UKp-k4-JzD" userLabel="Cell" customClass="GameCollectionViewCell" customModule="MyGames" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="132"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qCx-de-r4c">
+                                <rect key="frame" x="8" y="36" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="qCx-de-r4c" secondAttribute="height" multiplier="1:1" id="mkJ-dU-DAD"/>
+                                    <constraint firstAttribute="width" constant="60" id="rGX-aY-yTF"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BKu-gF-S8Q">
+                                <rect key="frame" x="83" y="36" width="34" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U1f-lx-0lH">
+                                <rect key="frame" x="83" y="65" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="U1f-lx-0lH" firstAttribute="top" secondItem="BKu-gF-S8Q" secondAttribute="bottom" constant="8" id="8B1-z8-nj8"/>
+                            <constraint firstItem="qCx-de-r4c" firstAttribute="top" secondItem="BKu-gF-S8Q" secondAttribute="bottom" constant="-21" id="Qzg-Ot-y3J"/>
+                            <constraint firstItem="qCx-de-r4c" firstAttribute="centerY" secondItem="UKp-k4-JzD" secondAttribute="centerY" id="YIl-Zy-c3v"/>
+                            <constraint firstItem="qCx-de-r4c" firstAttribute="leading" secondItem="UKp-k4-JzD" secondAttribute="leading" constant="8" id="cOt-1v-Qsd"/>
+                            <constraint firstItem="BKu-gF-S8Q" firstAttribute="centerX" secondItem="UKp-k4-JzD" secondAttribute="centerX" id="t1p-vB-c3S"/>
+                            <constraint firstItem="U1f-lx-0lH" firstAttribute="leading" secondItem="BKu-gF-S8Q" secondAttribute="trailing" constant="-34" id="tMb-1s-hUl"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="UKp-k4-JzD" secondAttribute="bottom" id="K5L-pp-7AM"/>
+                <constraint firstItem="UKp-k4-JzD" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="K81-Wu-O7Y"/>
+                <constraint firstAttribute="trailing" secondItem="UKp-k4-JzD" secondAttribute="trailing" id="iYL-h1-d0q"/>
+                <constraint firstItem="UKp-k4-JzD" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="x3J-3N-woM"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="gameDescriptionText" destination="U1f-lx-0lH" id="GcS-6q-pu1"/>
+                <outlet property="gameImageView" destination="qCx-de-r4c" id="W6C-bN-Hoh"/>
+                <outlet property="gameTitleText" destination="BKu-gF-S8Q" id="r4a-pH-g0s"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="110.49107142857143"/>
+        </collectionViewCell>
+    </objects>
+</document>

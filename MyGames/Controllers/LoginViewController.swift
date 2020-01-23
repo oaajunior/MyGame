@@ -81,8 +81,11 @@ class LoginViewController: UIViewController {
     @IBAction func loginButtonTapped(_ sender: Any) {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let tbc  = storyboard.instantiateViewController(withIdentifier:"TabBarController") as! UITabBarController
+          tbc.selectedIndex = 0
+          self.present(tbc, animated: true, completion:nil)
         
-        
+    
         
     }
 }

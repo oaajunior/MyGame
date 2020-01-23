@@ -55,8 +55,6 @@ class GameViewController: UIViewController {
         
     }
     
-    
-
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
          let vc = segue.destination as! AddEditViewController
          vc.game = game
